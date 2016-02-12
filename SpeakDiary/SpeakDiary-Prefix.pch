@@ -1,0 +1,56 @@
+
+//
+//  SpeakDiary-Prefix.pch
+//  SpeakDiary
+//
+//  Created by 광범 on 2015. 8. 29..
+//  Copyright (c) 2015년 박광범. All rights reserved.
+//
+
+#import "UIView+Frame.h"
+#import "UILabel+Adjust.h"
+#import "Util.h"
+#import <MagicalRecord.h>
+#import <AFNetworking.h>
+
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
+#ifdef __OBJC__
+//#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#endif
+
+#define ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s[Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define DLog(...)
+#endif
+
+#define DEF_FIRST    @"DEF_FIRST"
+#define DEF_USE_PASSWORD    @"DEF_USE_PASSWORD"
+#define DEF_PASSWORD    @"DEF_PASSWORD"
+#define DEF_USE_TOUCH    @"DEF_USE_TOUCH"
+
+
+
+#define Line_Color [UIColor colorWithRed:212.0f/255.0f green:212.0f/255.0f blue:212.0f/255.0f alpha:1.0f].CGColor
+
+
+
+
+#define NULL_TO_EMPTY_STRING(a) (a ? ([a isKindOfClass:[NSNull class]] ? @"" : a) : @"")
+
+#define RN_USE_TEST_SERVER 1
+
+#if RN_USE_TEST_SERVER
+#define RN_SERVER_URL    @"http://108.61.246.134:11022"
+#else
+#define RN_SERVER_URL    @"http://52.68.94.5:11022"
+#endif

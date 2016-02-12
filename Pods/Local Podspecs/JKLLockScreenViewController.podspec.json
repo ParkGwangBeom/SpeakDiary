@@ -1,0 +1,23 @@
+{
+  "name": "JKLLockScreenViewController",
+  "version": "1.0.0",
+  "summary": "It is Lock Screen Controller on platform iOS.",
+  "authors": {
+    "Choi Joong Kwan": "joongkwan.choi@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tiny2n/JKLLockScreenViewController.git",
+    "tag": "1.0.0"
+  },
+  "homepage": "http://tiny2n.tistory.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "LockScreenViewController/*.{h,m}",
+  "resources": "LockScreenViewController/*.{xib}",
+  "requires_arc": true
+}
